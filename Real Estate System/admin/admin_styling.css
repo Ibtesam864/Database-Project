@@ -1,0 +1,51 @@
+/* Admin Start */
+
+.admin_body {
+  background-color: #2d2f36;
+}
+
+nav {
+  background-color: red;
+}
+
+div hr,
+div h2 {
+  color: #e0e0e0;
+}
+
+/* Panel Table */
+/* Make sure the table has a distinct background and borders */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.custom-table th {
+  background-color: #003366;
+  padding: 12px;
+  color: #f8f9fa;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.custom-table td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  color: black;
+}
+
+.custom-table tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.custom-table tr:nth-child(even) {
+  background-color: #e6f0f8;
+}
+
+.custom-table tr:hover {
+  background-color: #d6eaf8;
+}
+
+/* Admin End */

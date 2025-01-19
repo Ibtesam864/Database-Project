@@ -1,0 +1,43 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['tenant_id'])) {
+    header("Location: https://localhost/Real%20Estate%20System/user/login.php?message=" . urlencode("You must be logged in as a tenant."));
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Request - REMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styling/style.css">
+    <link rel="icon" type="image/x-icon" href="https://localhost/Real%20Estate%20System/styling/assets/r_logo.png">
+</head>
+
+<body>
+    <?php include('../navbar.php'); ?>
+    <div class="container mt-5">
+        <h2>Make Maintenance Request</h2>
+        <form action="process_add_complaint.php" method="post">
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description" name="description">
+            </div>
+            <div class="mb-3">
+                <label for="request_date" class="form-label">Request Date</label>
+                <input type="date" class="form-control" id="request_date" name="request_date">
+            </div>
+            <input type="hidden" name="tenant_id" value="<?php echo $_SESSION['tenant_id']; ?>">
+            <button type="submit" class="btn btn-primary mb-5" name="save">Add Request</button>
+        </form>
+    </div>
+    <?php include '../footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

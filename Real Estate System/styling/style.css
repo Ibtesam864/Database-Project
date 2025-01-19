@@ -1,0 +1,27 @@
+/* index.php Start */
+
+.gray {
+  color: #4a4a4a;
+}
+
+.navy {
+  color: #1a3d6c;
+}
+
+.featured {
+  background-color: #eaf6ff;
+}
+
+.featured-body {
+  color: #4a4a4a;
+}
+
+/* .form-label {
+  color: #d4af37;
+}
+ */
+h2 {
+  color: #013220;
+}
+
+/* index.php End */
